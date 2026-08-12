@@ -1,0 +1,4 @@
+interface:
+  display_name: "Webinar Landing Page"
+  short_description: "Create grounded webinar briefings and landing pages"
+  default_prompt: "Use $webinar-landing-page to create a source-grounded briefing and landing page for this technical webinar."
