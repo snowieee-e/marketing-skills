@@ -1,0 +1,41 @@
+name: Tag webinar landing page skill
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "webinar-landing-page/**"
+      - ".github/workflows/tag-webinar-landing-page.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create stable version tag
+        shell: bash
+        run: |
+          version="$(tr -d '[:space:]' < webinar-landing-page/VERSION)"
+          if [[ ! "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Invalid semantic version: $version"
+            exit 1
+          fi
+
+          tag="webinar-landing-page-v${version}"
+          if git rev-parse "$tag" >/dev/null 2>&1; then
+            echo "$tag already exists; no new tag needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$tag" -m "Webinar Landing Page Skill v${version}"
+          git push origin "$tag"

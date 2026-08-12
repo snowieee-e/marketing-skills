@@ -211,3 +211,23 @@ The logic chain is an internal review aid and must not appear in the published l
 - During active copy development, record candidate learnings in the project update log and personal playbook; do not repeatedly modify the Skill for each draft-level change.
 - Treat a user statement such as `本次 webinar landing page 文案写完了，帮我总结并将可复用的经验沉淀到 skill` as the project-close trigger. At that point, review the complete update log, separate project-specific observations from reusable methods, complete the project Skill retrospective, update the personal playbook, and then make one consolidated Skill/template update.
 - Keep project work notes focused on three purposes: version-update evidence, end-of-project Skill retrospective, and the user's personal copywriting playbook. Do not create multiple project-local workflow-version files when the executable workflow already lives in the Skill.
+
+## Skill Release and GitHub Versioning
+
+During an active webinar project, record draft-level learnings in the project update log; do not create a Skill commit for every copy revision.
+
+When the user gives the project-close trigger and asks to sync the Skill to GitHub:
+
+1. Complete the retrospective and separate project-specific details from reusable rules.
+2. Make one consolidated update to the Skill, references, and templates.
+3. Scan the complete Skill directory for company-specific material, customer information, internal links or paths, credentials, personal data, and unpublished claims. Stop and report any risky content before committing.
+4. Validate the Skill structure and frontmatter.
+5. Review the Git diff and write one descriptive imperative commit message that states the reusable improvement, such as `Improve revised-source briefing workflow`.
+6. Update the adjacent `VERSION` file only when publishing a stable release:
+   - Patch, for corrections that do not change the workflow: `1.0.0` → `1.0.1`.
+   - Minor, for a new backward-compatible workflow or review capability: `1.0.0` → `1.1.0`.
+   - Major, for a substantial incompatible redesign: `1.x.x` → `2.0.0`.
+7. Commit the consolidated change and push it to the configured personal GitHub repository when the user has authorized project-close synchronization. If push authentication is unavailable, leave the verified commit ready and ask the user to click `Push origin` in GitHub Desktop.
+8. Let the repository workflow create the stable tag from `VERSION`. Do not manually maintain duplicate `SKILL-v1`, `SKILL-v2`, or changelog copies.
+
+Use commit history to explain every concrete change and stable tags to identify release milestones.
