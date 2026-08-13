@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company-Aware Webinar Landing Page"
+  short_description: "Create company-grounded webinar briefings and landing pages"
+  default_prompt: "Use $company-aware-webinar-landing-page to learn my company context, analyze these webinar sources, and create a briefing and landing-page draft."

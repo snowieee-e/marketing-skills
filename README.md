@@ -16,3 +16,9 @@ Version rules:
 - Patch: corrections without a workflow change, such as `1.0.0` → `1.0.1`.
 - Minor: a new backward-compatible workflow or review capability, such as `1.0.0` → `1.1.0`.
 - Major: a substantial incompatible redesign, such as `1.x.x` → `2.0.0`.
+
+## Company-Aware Webinar Landing Page
+
+The generalized Skill is stored in [`company-aware-webinar-landing-page/`](company-aware-webinar-landing-page/). It automatically builds a reusable company context from official company websites, product pages, documentation, or messaging materials before combining that context with webinar-specific sources.
+
+Real company context stays in the user's project or approved private location and is never stored in the public reusable Skill. Its stable tags use the format `company-aware-webinar-landing-page-v1.0.0`.
