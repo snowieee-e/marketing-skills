@@ -7,6 +7,16 @@ description: Create, revise, and audit concise English landing-page copy and Chi
 
 Turn technical source material into concise, audience-led webinar copy. Separate internal reasoning from public copy, and never let the landing page promise more than the speakers will cover.
 
+## Cross-Skill Maintenance Policy
+
+This Skill is the webinar-source-only implementation of a shared landing-page workflow. Maintain it alongside `company-aware-webinar-landing-page`:
+
+- Sync every reusable, non-company-context improvement to both Skills. This includes source hierarchy, briefing structure, audience analysis, narrative design, revision behavior, copy rules, claims audits, versioning, and project-close retrospectives.
+- Keep company-context behavior out of this Skill. Company websites, product context, brand guidance, and company-specific terminology belong only in `company-aware-webinar-landing-page` and in the user's private project files.
+- When a shared rule changes, apply the equivalent wording to both Skills without copying the company-context workflow into this one.
+- Keep the two Skills independently versioned and review their diffs separately. Use `[shared]` for a change synchronized to both and `[webinar]` for a change specific to this Skill.
+- Before committing a shared change, scan both Skill directories to ensure no real company data, private links, credentials, personal data, or unpublished claims were introduced.
+
 ## Workflow
 
 ### 1. Establish the deliverable

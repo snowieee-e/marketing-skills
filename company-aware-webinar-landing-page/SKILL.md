@@ -7,6 +7,16 @@ description: Create and revise technical webinar briefings and landing-page copy
 
 Create source-grounded webinar copy with a replaceable company layer. Keep the Skill generic: never write a real company's private context into this Skill directory.
 
+## Cross-Skill Maintenance Policy
+
+This Skill extends the shared webinar landing-page workflow with an automatically built, replaceable Company Context layer. Maintain it alongside `webinar-landing-page`:
+
+- Sync every reusable, non-company-context improvement to both Skills. This includes source hierarchy, briefing structure, audience analysis, narrative design, revision behavior, copy rules, claims audits, versioning, and project-close retrospectives.
+- Keep Company Context behavior specific to this Skill. Reading company websites and official product materials, building or revising `company-context.md`, and protecting company-specific information remain here only.
+- When a shared rule changes, update the equivalent section in both Skills; when a change concerns only Company Context, update this Skill only.
+- Keep the two Skills independently versioned and review their diffs separately. Use `[shared]` for a change synchronized to both and `[company-aware]` for a change specific to this Skill.
+- Before committing any change, scan the Skill directory to ensure no real company data, private links, credentials, personal data, or unpublished claims were introduced.
+
 ## Workflow
 
 ### 1. Establish the project
