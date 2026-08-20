@@ -1,0 +1,4 @@
+interface:
+  display_name: "Source to Social Post"
+  short_description: "Turn source material into fresh LinkedIn and X posts"
+  default_prompt: "Use $source-to-social-post to turn this source into distinct LinkedIn and X posts."
