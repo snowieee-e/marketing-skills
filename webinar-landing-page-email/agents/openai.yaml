@@ -1,0 +1,4 @@
+interface:
+  display_name: "Webinar Landing Page + Email"
+  short_description: "Create grounded webinar pages and email campaigns"
+  default_prompt: "Use $webinar-landing-page-email to create a source-grounded webinar landing page and coordinated email campaign."
